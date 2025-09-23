@@ -1,5 +1,5 @@
 "use client";
-
+import images from "@/lib/asset";
 import Image from "next/image";
 
 export default function Certifications() {
@@ -8,7 +8,7 @@ export default function Certifications() {
       title: "Frontend Development",
       issuer: "freeCodeCamp",
       date: "2023",
-      img: "/cert1.png", // replace with your image in /public
+      img: images.dummyCert,
       link: "https://www.freecodecamp.org/certification/your-link",
       description: "Comprehensive frontend curriculum focusing on HTML, CSS, and JavaScript.",
     },

@@ -1,5 +1,5 @@
 "use client";
-
+import images from "@/lib/asset";
 import Image from "next/image";
 
 export default function Projects() {
@@ -8,7 +8,7 @@ export default function Projects() {
       title: "Portfolio Website",
       description:
         "A modern portfolio built with Next.js, Tailwind CSS, and Framer Motion animations.",
-      img: "/project1.png", // 👉 replace with your image
+      img: images.dummyProject,
       demo: "https://your-demo-link.com",
       github: "https://github.com/your-repo",
     },
