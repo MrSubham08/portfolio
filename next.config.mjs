@@ -1,9 +1,11 @@
-// next.config.js
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: "export",   // needed for static export
-  basePath: "/portfolio", // your repo name
-  assetPrefix: "/portfolio/", // also adjust assets
+  output: "export",                 // static export for GitHub Pages
+  images: { unoptimized: true },    // disable Next.js image optimization
+  basePath: isProd ? "/portfolio" : "",   // subpath for GitHub Pages
+  assetPrefix: isProd ? "/portfolio/" : "",
 };
 
-module.exports = nextConfig;
+export default nextConfig;
