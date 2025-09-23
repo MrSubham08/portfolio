@@ -1,5 +1,5 @@
 "use client";
-
+import assets from "@/lib/asset";
 import Image from "next/image";
 
 
@@ -39,7 +39,7 @@ export default function Hero() {
         {/* === Right Profile Image === */}
         <div className="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0 z-10">
           <Image
-  src="/assets/avatar.png"  // move avatar inside /public/assets/
+            src={assets.avatar}
   alt="Profile image"
   width={350}
   height={350}
