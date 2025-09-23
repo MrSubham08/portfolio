@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 
+
 export default function Hero() {
   return (
     <header className="relative min-h-screen flex items-center bg-gradient-to-b from-indigo-900 via-purple-900 to-slate-900 overflow-hidden text-white">
@@ -38,12 +39,12 @@ export default function Hero() {
         {/* === Right Profile Image === */}
         <div className="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0 z-10">
           <Image
-            src="/avatar.png"
-            alt="Profile image"
-            width={350}
-            height={350}
-            className="rounded-full shadow-xl border-4 border-purple-500"
-          />
+  src="/assets/avatar.png"  // move avatar inside /public/assets/
+  alt="Profile image"
+  width={350}
+  height={350}
+  className="rounded-full shadow-xl border-4 border-purple-500"
+        />
         </div>
       </div>
     </header>
