@@ -1,11 +1,11 @@
 // next.config.mjs
-const isProd = process.env.NODE_ENV === "production";
+const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 const nextConfig = {
-  output: "export",                 // static export for GitHub Pages
-  images: { unoptimized: true },    // disable Next.js image optimization
-  basePath: isProd ? "/portfolio" : "",   // subpath for GitHub Pages
-  assetPrefix: isProd ? "/portfolio/" : "",
+  output: "export",              // static export
+  images: { unoptimized: true }, // disable image optimization
+  basePath: prefix,              // use prefix here
+  assetPrefix: prefix,           // and here
 };
 
 export default nextConfig;

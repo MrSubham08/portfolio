@@ -1,20 +1,10 @@
-// src/lib/assets.js
+// src/lib/images.js
+const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
-const assets = {
-  avatar: "/assets/avatar.png",
-
-  // Certificates
-  dummyCert: "/assets/certificate/dummy_cert.png",
-
-  // Projects
-  dummyProject: "/assets/project_img/dummy_project.jpg",
-
-  // Icons
-  file: "/file.svg",
-  globe: "/globe.svg",
-  next: "/next.svg",
-  vercel: "/vercel.svg",
-  window: "/window.svg",
+const images = {
+  avatar: `${prefix}/assets/avatar.png`,
+  dummyCert: `${prefix}/assets/certificate/dummy_cert.png`,
+  dummyProject: `${prefix}/assets/project_img/dummy_project.jpg`,
 };
 
-export default assets;
+export default images;
