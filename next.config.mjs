@@ -1,11 +1,9 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
-  output: "export",
-  images: { unoptimized: true },
-  basePath: isProd ? "/portfolio" : "",
-  assetPrefix: isProd ? "/portfolio/" : "",
+  output: "export",   // needed for static export
+  basePath: "/portfolio", // your repo name
+  assetPrefix: "/portfolio/", // also adjust assets
 };
 
-export default nextConfig;
+module.exports = nextConfig;
