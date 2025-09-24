@@ -39,7 +39,7 @@ export default function Hero() {
         {/* === Right Profile Image === */}
         <div className="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0 z-10">
           <Image
-            src={images.avatar}
+            src={images.me}
   alt="Profile image"
   width={350}
   height={350}

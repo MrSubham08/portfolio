@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import images from "@/lib/asset";
 import Image from "next/image";
 
 export default function About() {
@@ -40,7 +41,7 @@ export default function About() {
         {/* === Left Image === */}
         <div className="flex-1 flex justify-center lg:justify-start">
           <Image
-            src="/avatar.png" // 👉 Replace with your image
+            src={images.avatar} // 👉 Replace with your image
             alt="About Me"
             width={380}
             height={380}

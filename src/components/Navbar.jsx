@@ -1,6 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import {
+  Github,
+  Linkedin,
+  Home,
+  User,
+  FolderGit2,
+  Award,
+  Mail,
+} from "lucide-react"; // ✅ Importing icons
 
 export default function Navbar() {
   return (
@@ -14,34 +23,75 @@ export default function Navbar() {
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-8 text-white font-medium">
           <li>
-            <Link href="#hero" className="hover:text-purple-400 transition">
-              Home
+            <Link
+              href="#hero"
+              className="flex items-center gap-2 hover:text-purple-400 transition"
+            >
+              <Home size={18} /> Home
             </Link>
           </li>
           <li>
-            <Link href="#about" className="hover:text-purple-400 transition">
-              About
+            <Link
+              href="#about"
+              className="flex items-center gap-2 hover:text-purple-400 transition"
+            >
+              <User size={18} /> About
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="hover:text-purple-400 transition">
-              Projects
+            <Link
+              href="#projects"
+              className="flex items-center gap-2 hover:text-purple-400 transition"
+            >
+              <FolderGit2 size={18} /> Projects
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-purple-400 transition">
-              Contact
+            <Link
+              href="#certifications"
+              className="flex items-center gap-2 hover:text-purple-400 transition"
+            >
+              <Award size={18} /> Certificates
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#contact"
+              className="flex items-center gap-2 hover:text-purple-400 transition"
+            >
+              <Mail size={18} /> Contact
             </Link>
           </li>
         </ul>
 
-        {/* Call to Action */}
-        <Link
-          href="#contact"
-          className="hidden md:block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition"
-        >
-          Hire Me
-        </Link>
+        {/* Right Side: Socials + CTA */}
+        <div className="hidden md:flex items-center space-x-6">
+          {/* Social Icons */}
+          <a
+            href="https://github.com/your-github" // 🔗 replace with your GitHub
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-400 transition"
+          >
+            <Github size={24} />
+          </a>
+          <a
+            href="https://linkedin.com/in/your-linkedin" // 🔗 replace with your LinkedIn
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-purple-400 transition"
+          >
+            <Linkedin size={24} />
+          </a>
+
+          {/* Hire Me Button */}
+          <Link
+            href="#contact"
+            className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition"
+          >
+            Hire Me
+          </Link>
+        </div>
       </div>
     </nav>
   );
