@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import images from "@/lib/asset";
 import Image from "next/image";
 
@@ -8,24 +9,10 @@ export default function About() {
   const [activeTab, setActiveTab] = useState("skills");
 
   const tabs = {
-    skills: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "JavaScript",
-      "TypeScript",
-      "UI/UX",
-    ],
-    tools: [
-      "VS Code",
-      "Git & GitHub",
-      "Figma",
-      "Postman",
-      "Vercel",
-      "Node.js",
-    ],
+    skills: ["Next.js", "React", "Tailwind CSS", "JavaScript", "TypeScript", "UI/UX"],
+    tools: ["VS Code", "Git & GitHub", "Figma", "Postman", "Vercel", "Node.js"],
     education: [
-      "🎓 B.Tech in Computer Science",
+      "🎓 B.Tech in Electronics and Communication Engineering",
       "💻 Frontend Development Bootcamp",
       "📖 Continuous self-learning & projects",
     ],
@@ -34,36 +21,49 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center bg-gradient-to-b from-slate-900 via-purple-950 to-black text-white py-20"
+      className="relative min-h-screen flex items-center bg-transparent text-white py-20"
     >
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16 px-6 lg:px-12">
-        
-        {/* === Left Image === */}
-        <div className="flex-1 flex justify-center lg:justify-start">
+        {/* ✨ Left Image with scroll animation */}
+        <motion.div
+          className="flex-1 flex justify-center lg:justify-start relative"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          {/* Soft purple glow behind image */}
+          <div className="absolute w-72 h-72 bg-purple-700/20 blur-3xl rounded-full -z-10"></div>
+
           <Image
-            src={images.avatar} // 👉 Replace with your image
+            src={images.avatar}
             alt="About Me"
             width={380}
             height={380}
             className="rounded-2xl shadow-xl border-4 border-purple-600"
           />
-        </div>
+        </motion.div>
 
-        {/* === Right Text === */}
-        <div className="flex-1 text-center lg:text-left">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+        {/* ✨ Right Content with fade-up animation */}
+        <motion.div
+          className="flex-1 text-center lg:text-left"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]">
             About <span className="text-purple-400">Me</span>
           </h2>
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-6">
-            I&apos;m a passionate{" "}
-            <span className="text-purple-400">Frontend Developer</span> with
-            experience building modern, responsive web applications. I love
-            turning ideas into clean, elegant, and interactive designs using{" "}
+            I'm a passionate <span className="text-purple-400">Frontend Developer</span> with
+            experience building modern, responsive web applications. I love turning ideas into
+            clean, elegant, and interactive designs using{" "}
             <span className="font-semibold">Next.js, React, and Tailwind CSS</span>.
           </p>
 
-          {/* === Tab Buttons === */}
+          {/* Tabs */}
           <div className="flex gap-4 justify-center lg:justify-start mb-8">
             {["skills", "tools", "education"].map((tab) => (
               <button
@@ -80,18 +80,24 @@ export default function About() {
             ))}
           </div>
 
-          {/* === Tab Content === */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {/* Tab Content with animation */}
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-2 sm:grid-cols-3 gap-4"
+          >
             {tabs[activeTab].map((item, i) => (
               <span
                 key={i}
-                className="px-4 py-2 border border-purple-500 rounded-lg text-purple-300 font-semibold text-center"
+                className="glass-card px-4 py-2 text-purple-300 font-semibold text-center"
               >
                 {item}
               </span>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
