@@ -52,18 +52,18 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="relative min-h-screen bg-transparent text-white py-20"
+      className="relative min-h-screen bg-transparent py-20 text-zinc-900 dark:text-zinc-50"
     >
       <div className="container mx-auto px-6 lg:px-12">
         {/* Title */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold mb-12 text-center drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]"
+          className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-black dark:text-zinc-50"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          My <span className="text-purple-400">Certifications</span>
+          Certi<span className="text-indigo-600 dark:text-indigo-400">fications</span>
         </motion.h2>
 
         {/* Cards */}
@@ -79,7 +79,7 @@ export default function Certifications() {
               key={i}
               variants={cardVariants}
               whileHover={{ scale: 1.02 }}
-              className="glass-card flex flex-col items-center justify-between text-center p-6 hover:shadow-purple-500/30 transition transform hover:-translate-y-2 cursor-pointer"
+              className="glass-card flex flex-col items-center justify-between text-center p-6 cursor-pointer"
               onClick={() => setSelectedCert(cert)}
             >
               {/* Certificate Image Zoom on Hover */}
@@ -97,9 +97,9 @@ export default function Certifications() {
               </motion.div>
 
               {/* Certificate Info */}
-              <h3 className="text-xl font-bold text-purple-300 mb-2">{cert.title}</h3>
-              <p className="text-slate-300 text-sm mb-4">
-                {cert.issuer} • <span className="text-slate-400">{cert.date}</span>
+              <h3 className="text-xl font-extrabold text-black dark:text-indigo-400 mb-2">{cert.title}</h3>
+              <p className="text-zinc-800 dark:text-zinc-400 font-medium text-sm mb-4">
+                {cert.issuer} • <span className="text-zinc-600 dark:text-zinc-500">{cert.date}</span>
               </p>
 
               {/* View Button */}
@@ -118,14 +118,14 @@ export default function Certifications() {
       <AnimatePresence>
         {selectedCert && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 dark:bg-black/80 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedCert(null)}
           >
             <motion.div
-              className="relative bg-slate-900/80 border border-purple-700 rounded-2xl p-6 w-[90%] max-w-lg shadow-lg text-center"
+              className="relative bg-white/90 dark:bg-slate-900/90 border border-indigo-200 dark:border-indigo-700 rounded-2xl p-6 w-[90%] max-w-lg shadow-2xl text-center"
               style={{ transformStyle: "preserve-3d", perspective: "1200px" }}
               initial={{ rotateY: 90, opacity: 0 }}
               animate={{ rotateY: 0, opacity: 1 }}
@@ -134,12 +134,12 @@ export default function Certifications() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Neon Glow Border */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-purple-500 blur-md opacity-75 animate-pulse-glow"></div>
+              <div className="absolute inset-0 rounded-2xl border-2 border-indigo-500/50 blur-md opacity-75 hidden dark:block animate-pulse-glow"></div>
 
               {/* Close Button */}
               <button
                 onClick={() => setSelectedCert(null)}
-                className="absolute top-3 right-4 text-purple-400 hover:text-purple-200 text-xl z-10"
+                className="absolute top-3 right-4 text-zinc-500 hover:text-zinc-800 dark:text-indigo-400 dark:hover:text-indigo-200 text-xl z-20"
               >
                 ✕
               </button>
@@ -159,10 +159,10 @@ export default function Certifications() {
                     className="rounded-lg mx-auto mb-4 object-contain"
                   />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-purple-300 mb-2">
+                <h3 className="text-2xl font-extrabold text-black dark:text-indigo-300 mb-2">
                   {selectedCert.title}
                 </h3>
-                <p className="text-slate-300 mb-4">
+                <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-4">
                   {selectedCert.issuer} • {selectedCert.date}
                 </p>
                 <a
@@ -182,18 +182,18 @@ export default function Certifications() {
       <style jsx global>{`
         @keyframes pulse-glow {
           0%, 100% {
-            box-shadow: 0 0 25px rgba(168, 85, 247, 0.6),
-              0 0 45px rgba(147, 51, 234, 0.4),
-              0 0 70px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 0 25px rgba(99, 102, 241, 0.4),
+              0 0 45px rgba(129, 140, 248, 0.2),
+              0 0 70px rgba(167, 139, 250, 0.1);
           }
           50% {
-            box-shadow: 0 0 40px rgba(168, 85, 247, 0.9),
-              0 0 70px rgba(147, 51, 234, 0.6),
-              0 0 100px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.6),
+              0 0 70px rgba(129, 140, 248, 0.4),
+              0 0 100px rgba(167, 139, 250, 0.3);
           }
         }
-
-        .animate-pulse-glow {
+        
+        .dark .animate-pulse-glow {
           animation: pulse-glow 3s infinite ease-in-out;
         }
       `}</style>

@@ -50,18 +50,18 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen bg-transparent text-white py-20"
+      className="relative min-h-screen bg-transparent py-20 text-zinc-900 dark:text-zinc-50"
     >
       <div className="container mx-auto px-6 lg:px-12">
         {/* Heading animation */}
         <motion.h2
-          className="text-4xl md:text-5xl font-extrabold mb-12 text-center drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]"
+          className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-black dark:text-zinc-50"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          My <span className="text-purple-400">Projects</span>
+          Pro<span className="text-indigo-600 dark:text-indigo-400">jects</span>
         </motion.h2>
 
         {/* Grid animation */}
@@ -91,23 +91,23 @@ export default function Projects() {
 
               {/* Info */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-purple-300 mb-2">
+                <h3 className="text-2xl font-extrabold text-black dark:text-zinc-50 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-slate-300 mb-4">{project.description}</p>
+                <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-5 leading-relaxed">{project.description}</p>
 
                 <div className="flex gap-4">
                   <a
                     href={project.demo}
                     target="_blank"
-                    className="glass-button flex-1 text-center"
+                    className="glass-button flex-1 text-center py-2.5 rounded-lg"
                   >
                     Live Demo
                   </a>
                   <a
                     href={project.github}
                     target="_blank"
-                    className="flex-1 px-4 py-2 rounded-lg border border-purple-500 text-purple-400 text-center font-semibold hover:bg-purple-700/20 transition"
+                    className="flex-1 px-4 py-2.5 rounded-lg border border-indigo-200 dark:border-indigo-500/50 text-indigo-700 dark:text-indigo-400 text-center font-medium hover:bg-indigo-50 dark:hover:bg-indigo-500/10 transition-colors"
                   >
                     GitHub
                   </a>
