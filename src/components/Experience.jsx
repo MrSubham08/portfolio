@@ -1,17 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, LayoutTemplate, Globe2 } from "lucide-react";
+import { BrainCircuit, Cloud, Database, Cpu } from "lucide-react";
 
 export default function Experience() {
   const experiences = [
-    { role: "Frontend Developer", company: "TechCorp Inc.", duration: "2022 - Present", description: "Building modern, responsive, and accessible UIs using React, Next.js, and Tailwind CSS.", icon: Code2 },
-    { role: "Web Developer Intern", company: "Creative Studio", duration: "2021 - 2022", description: "Worked on client projects, collaborated with designers, and implemented features with JS and CSS.", icon: LayoutTemplate },
-    { role: "Freelance Developer", company: "Self-Employed", duration: "2019 - 2021", description: "Delivered small business websites, optimized performance, and created intuitive UI/UX for clients.", icon: Globe2 },
+    { 
+      role: "SAP ABAP Developer", 
+      company: "BIPARD Skill Park / SEED Infotech", 
+      duration: "Jun 2025 - Jul 2025", 
+      description: [
+        "Earned SAP Certified Associate – Back-End Developer (ABAP Cloud) global certification.",
+        "Applied OO-ABAP, CDS Views, and AMDP to design efficient, scalable business solutions.",
+        "Implemented performance tuning & enhancements using User Exits, BAdIs, and SAP Debugger."
+      ], 
+      icon: Database 
+    },
+    { 
+      role: "Machine Learning Intern", 
+      company: "NIELIT Gorakhpur", 
+      duration: "Nov 2024 - Dec 2024", 
+      description: [
+        "Built and optimized predictive models using supervised and unsupervised techniques.",
+        "Applied advanced data preprocessing and visualization using Pandas, Matplotlib, and Seaborn."
+      ], 
+      icon: BrainCircuit 
+    },
+    { 
+      role: "Salesforce Developer Intern", 
+      company: "Salesforce Platform", 
+      duration: "Dec 2023 - Jan 2024", 
+      description: [
+        "Developed custom applications using Apex code, Visualforce, and Lightning Web Components (LWC).",
+        "Implemented automation flows, workflows, and database models to streamline sales processes.",
+        "Earned multiple Salesforce Superbadges including Apex Specialist."
+      ], 
+      icon: Cloud 
+    },
+    { 
+      role: "Embedded Systems Intern", 
+      company: "Internshala", 
+      duration: "Feb 2023 - Apr 2023", 
+      description: [
+        "Programmed microcontrollers and designed hardware architectures using C/C++ and Arduino.",
+        "Integrated specialized sensors and modules for real-world automated applications."
+      ], 
+      icon: Cpu 
+    }
   ];
 
   return (
-    <section id="experience" className="relative min-h-screen bg-transparent py-20 text-zinc-900 dark:text-zinc-50 overflow-hidden">
+    <section id="experience" className="relative min-h-screen scroll-mt-24 bg-transparent py-20 text-zinc-900 dark:text-zinc-50 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
@@ -76,9 +115,20 @@ export default function Experience() {
                       <p className="text-zinc-600 dark:text-zinc-400 font-semibold">{exp.duration}</p>
                     </div>
 
-                    <p className="text-zinc-800 dark:text-zinc-300 font-medium leading-relaxed text-lg">
-                      {exp.description}
-                    </p>
+                    {Array.isArray(exp.description) ? (
+                      <ul className="text-zinc-800 dark:text-zinc-300 font-medium leading-relaxed text-lg list-none space-y-2">
+                        {exp.description.map((item, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <span className="text-indigo-500 mr-3 mt-1.5 text-xs">✦</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-zinc-800 dark:text-zinc-300 font-medium leading-relaxed text-lg">
+                        {exp.description}
+                      </p>
+                    )}
                   </motion.div>
                 </div>
               </div>

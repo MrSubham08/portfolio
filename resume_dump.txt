@@ -1,0 +1,102 @@
+Subham  Kumar  
+• shubhamkumar13082004@gmail.com  
+• +91 -7488462032  
+• LinkedIn:  www.linkedin.com/in/subhamkumar08/  
+• Github:  https://github.com/MrSubham08   
+• Portfolio: https://mrsubham08.github.io/portfolio/   
+OBJECTIVE  
+Driven B.Tech  ECE graduate with strong skills in Python, C, and C++, and hands -on experience in Machine 
+Learning  and embedded  systems.  Skilled  in problem -solving  and algorithm  development,  with  a passion  for 
+building innovative software solutions.  
+ED UCATION  
+• Bachelor of Technology (B.Tech), Electronics & Communication Engineering  June  2025 
+Government Engineering College, Vaishali  | 8.42 CGPA  
+• Intermediate  of Science  April  2021  
+A.N.  College,  Patna  | 81.4%  
+• Matriculation  May  2019  
+S.H.S  Saraswati  Dham,  Basuhar  Punpun  | 78.8%  
+ 
+INTERNSHIP  & TRAINING  
+SAP  ABAP  Trainee  🔗 | Jun 2025  – Jul 2025  
+BIPARD  Skill  Park,  Patna  
+Certification:  SAP  Certified  Associate  – Back -End  Developer  – ABAP  Cloud  
+• Achieved  SAP ABAP Cloud  global  certification  and earned  the “ABAP  Cloud  Backend  Developer”  badge  under  SEED 
+Infotech Ltd.  
+• Proficient  in Data  Dictionary,  modularization,  Smart  Forms,  RICEFW  components,  and  custom  report 
+development . 
+• Applied  OO-ABAP,  CDS  Views,  and  AMDP  to design  efficient  and scalable  business  solutions.  
+• Implemented  enhancements  and  performance  tuning  using  User  Exits,  BAdIs,  SAP  Debugger,  and analysis  tools  
+. 
+ 
+Python  & Machine  Learning  Intern🔗 
+NIELIT,  Gorakhpur  | Nov  2024  – Dec 2024  
+• Built  and optimized  machine learning models  using supervised  and unsupervised techniques.  
+• Applied  data  preprocessing  and visualization  using  Pandas,  Matplotlib,  and Seaborn.  
+ 
+ 
+Salesforce  Developer  Intern🔗 
+Salesforce  | Dec 2023  – Jan 2024  
+• Developed  and customized  Salesforce  applications  using  Apex,  Visualforce,  and Lightning  Components.  
+• Implemented  automation  flows,  workflows,  and database  management  models  to streamline  business  processes.  
+• Completed  multiple  Salesforce  Superbadges,  demonstrating  expertise  in cloud  computing,  CRM,  and backend 
+development.  
+ 
+ 
+Embedded  Systems  Intern  
+Internshala  | Feb 2023  – Apr 2023  
+ 
+• Programmed  microcontrollers  and designed  embedded systems  using  C/C++  and Arduino.  
+• Integrated  sensors and  modules  for real-world  applications  with  a focus  on system  reliability.  
+ 
+PROJECTS  
+ 
+Vehicle Record System — Computer Vision Based Smart Access Control  
+• Designed a computer vision –based system for automated vehicle recognition and access control.  
+• Implemented license plate detection using Python, OpenCV, and machine learning algorithms.  
+• Increased recognition accuracy by optimizing preprocessing and character segmentation techniques.   
+ 
+ 
+ 
+Adaptive  Differential  Notch  Filtering  for Dynamic  Interference  Cancellation  in Cognitive  Radio  Networks  
+• Designed  and implemented  an adaptive  notch  filtering  technique  to dynamically  suppress  interference  in 
+cognitive radio systems.  
+• Simulated  the system  using  MATLAB,  achieving  enhanced  signal  clarity  and improved  spectral  efficiency  under 
+varying interference conditions.  
+ 
+MathWorks  MiniDrone  
+• Built  an autonomous drone  using  MATLAB  & Simulink  to follow  a predefined  path  and perform  precise 
+landings.  
+• Showcased  skills  in control  systems,  drone  navigation,  and simulation  during  the MathWorks  MiniDrone 
+Competition 2024 at IISc Bangalore.  
+SCHOLASTIC  ACHIEVEMENTS  
+• Secured  1st rank  in 1st & 2nd  semesters ; awarded  Merit  Certificate  (ECE).  
+• Ranked  25th  nationwide in e-Yantra  Robotics Competition  2023 , IIT Bombay.  
+• Finalist  (Top  10) in MathWorks  MiniDrone Competition 2024,  IISc Bangalore . 
+• 2nd  place  in Internal Hackathon  for Smart  India Hackathon  (SIH) , institute  level.  
+ 
+POSITIONS  OF RESPONSIBILITY  
+• Core  Member , Technical  and  Innovation  Club,  GEC  Vaishali . 
+• Led the team  of 4 members  in SRIJAN  2023,  Intra -College  Technical  Competition.  
+ 
+SKILLS  AND  INTERESTS  
+Programming  Languages:  C, C++,  Java,  Python,  MATLAB,  SAP  ABAP  
+Frontend  Technologies:  HTML5,  CSS3  
+Tools  & Technologies:  Git, GitHub,  Proteus,  Arduino,  MATLAB,  Computer  Vision,  S/4HANA  
+Soft  Skills:  Leadership  skills,  Critical  thinking,  Data -driven  decision making,  Problem  solving.  
+ 
+CERTIFICATIONS  
+• Grade  Certificate  – GADP  Training  Program , organized  by ER. 
+• Cybersecurity  Essentials , Cisco  Networking  Academy.  
+• NPTEL:  Database  Management  System,  Welding  Application  Technology,  Developing  Soft Skills  & Personality.  
+• IIT Bombay  Spoken Tutorial : HTML,  Programming  in C/C++, Arduino.  
+ 
+EXTRA -CURRICULAR  ACTIVITIES  
+Category  Achievements  
+Technical  • Completed  7-day workshop  on “Intelligent  Wireless  Connectivity  for Post 5G Era” (SERB 
+Karyashala, IIT Patna).  
+• Attended  2-day AI & ML workshop  by Edufabrica  (E-Cell IIT Patna).  
+• Participated  in 4th National  Quality  Convention  2025  on "Resilient  and Sustainable  Growth".  
+Cultural  • Secured  3rd position in Drama  at Extravaganza,  Inter -College  Cultural  Fest,  GEC  Vaishali  
+ 
+LANGUAGES  
+Hindi,  English,  Japanese  (Basic N5) 

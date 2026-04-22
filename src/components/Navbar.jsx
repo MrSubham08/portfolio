@@ -105,7 +105,7 @@ export default function Navbar() {
             href="#contact"
             className="glass-button py-2.5 px-5 shadow-sm text-sm"
           >
-            Hire Me
+            Contact
           </Link>
         </div>
 
@@ -202,7 +202,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="glass-button block mt-auto w-full text-center py-3"
               >
-                Hire Me
+                Contact
               </Link>
             </motion.div>
           </>

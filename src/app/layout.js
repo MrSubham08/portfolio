@@ -1,12 +1,13 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import CustomCursor from "@/components/CustomCursor";
 
 const pjs = Plus_Jakarta_Sans({ variable: "--font-pjs", subsets: ["latin"] });
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Frontend Developer Portfolio",
+  title: "Subham Kumar | Software Developer",
+  description: "Portfolio of Subham Kumar, an Electronics & Communication Engineering student exploring ML, AI, and SAP ABAP development.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,7 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${pjs.variable} font-sans antialiased bg-zinc-50 dark:bg-[#09090b] text-zinc-900 dark:text-zinc-50 transition-colors duration-300 relative`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          
+          <CustomCursor />
+
           {/* Global unified ambient backdrop spanning whole site */}
           <div className="fixed inset-0 pointer-events-none -z-50 overflow-hidden">
             {/* Top left light source */}

@@ -52,7 +52,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="relative min-h-screen bg-transparent py-20 text-zinc-900 dark:text-zinc-50"
+      className="relative min-h-screen scroll-mt-24 bg-transparent py-20 text-zinc-900 dark:text-zinc-50"
     >
       <div className="container mx-auto px-6 lg:px-12">
         {/* Title */}

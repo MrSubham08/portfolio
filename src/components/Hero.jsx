@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import images from "@/lib/asset";
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
+import MagneticButton from "@/components/MagneticButton";
 
 // Premium Typewriter Hook/Component
 const Typewriter = ({ strings, typingSpeed = 100, deletingSpeed = 40, pauseTime = 2500 }) => {
@@ -46,7 +47,7 @@ const Typewriter = ({ strings, typingSpeed = 100, deletingSpeed = 40, pauseTime 
 
 export default function Hero() {
   return (
-    <header className="relative min-h-screen flex items-center bg-transparent text-zinc-900 dark:text-zinc-50 overflow-hidden">
+    <header className="relative min-h-screen flex lg:items-center bg-transparent text-zinc-900 dark:text-zinc-50 overflow-hidden pt-32 pb-16 lg:py-0">
       {/* Subtle background aura */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.04),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.06),transparent_70%)] pointer-events-none z-0" />
 
@@ -58,21 +59,24 @@ export default function Hero() {
               <Typewriter strings={[
                 "Software Developer",
                 "SAP ABAP Developer",
-                "AI Solutions Enthusiast"
               ]} />
             </span>
           </h1>
           <p className="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-zinc-800 dark:text-zinc-300 font-medium leading-relaxed">
-            I’m passionate about creating intelligent solutions that bridge the gap between software and hardware. My journey in Electronics & Communication Engineering has led me to explore SAP ABAP development alongside computer vision and machine learning through hands-on projects and real-world applications. From building smart automation systems to developing AI-driven solutions,
+            I'm passionate about creating intelligent solutions that bridge the gap between software and hardware. My journey in Electronics & Communication Engineering has led me to explore SAP ABAP development alongside computer vision and machine learning through hands-on projects and real-world applications. From building smart automation systems to developing AI-driven solutions,
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
-            <a href="#contact" className="glass-button flex items-center gap-2 group">
-              Contact me <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href={images.resume} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm flex items-center gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer shadow-sm">
-              My resume <Download size={18} />
-            </a>
+            <MagneticButton>
+              <a href="#contact" className="glass-button flex items-center gap-2 group">
+                Contact me <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a href={images.resume} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-medium bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm flex items-center gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer shadow-sm">
+                My resume <Download size={18} />
+              </a>
+            </MagneticButton>
           </div>
         </div>
 

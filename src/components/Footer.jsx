@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Decorative separating line */}
         <div className="h-px w-1/2 mx-auto bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent"></div>
         <p className="text-sm font-medium">
-          © {new Date().getFullYear()} MyPortfolio. Built with ❤️ using Next.js & Tailwind CSS.
+          © {new Date().getFullYear()} Subham Kumar. Built with ❤️ using Next.js & Tailwind CSS.
         </p>
       </div>
     </footer>

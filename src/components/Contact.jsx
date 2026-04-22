@@ -27,7 +27,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen bg-transparent py-20 flex items-center text-zinc-900 dark:text-zinc-50 overflow-hidden"
+      className="relative min-h-screen scroll-mt-24 bg-transparent py-20 flex items-center text-zinc-900 dark:text-zinc-50 overflow-hidden"
     >
       <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-16 relative z-10">
         

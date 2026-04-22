@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import images from "@/lib/asset";
 import Image from "next/image";
-import { Code, GraduationCap, Briefcase, Figma, Github, Terminal, Monitor, Sparkles } from "lucide-react";
+import { Code, GraduationCap, Briefcase } from "lucide-react";
+import MarqueeSlider from "@/components/MarqueeSlider";
 
 export default function About() {
   const cards = [
@@ -27,18 +28,12 @@ export default function About() {
     },
   ];
 
-  const tools = [
-    { Icon: Monitor, color: "text-blue-500" },
-    { Icon: Terminal, color: "text-green-500" },
-    { Icon: Github, color: "text-black dark:text-white" },
-    { Icon: Figma, color: "text-pink-500" },
-    { Icon: Sparkles, color: "text-amber-500" },
-  ];
+
 
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center bg-transparent py-24 text-zinc-900 dark:text-zinc-50"
+      className="relative min-h-screen scroll-mt-24 flex items-center bg-transparent py-24 text-zinc-900 dark:text-zinc-50"
     >
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
         
@@ -113,25 +108,12 @@ export default function About() {
               ))}
             </div>
 
-            {/* Tools I Use */}
-            <div>
+            {/* ♾️ Tech Stack Marquee */}
+            <div className="mt-2">
               <p className="text-zinc-500 dark:text-zinc-400 font-semibold mb-5 text-sm uppercase tracking-widest text-center lg:text-left">
-                Tools I use
+                Tech Stack &amp; Tools
               </p>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                {tools.map((tool, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.6 + (idx * 0.1) }}
-                    viewport={{ once: true }}
-                    className="w-14 h-14 flex items-center justify-center bg-white dark:bg-zinc-800 rounded-2xl border-2 border-zinc-100 dark:border-zinc-700 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer"
-                  >
-                    <tool.Icon size={24} className={tool.color} />
-                  </motion.div>
-                ))}
-              </div>
+              <MarqueeSlider />
             </div>
 
           </motion.div>
