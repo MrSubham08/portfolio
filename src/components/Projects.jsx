@@ -58,14 +58,22 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div key={i} variants={cardVariants} whileHover={{ scale: 1.02, y: -4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
               <div className="glass-card overflow-hidden rounded-2xl h-full flex flex-col">
-                {/* Image */}
-                <div className="relative w-full h-48">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
+                {/* Thumbnail — animated WebP if available, else static image */}
+                <div className="relative w-full h-48 overflow-hidden bg-zinc-900">
+                  {project.video ? (
+                    <img
+                      src={project.video}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </div>
 
                 {/* Info */}
@@ -131,7 +139,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-all duration-300 group"
               >
-                View All Projects
+                View more Projects
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </MagneticButton>

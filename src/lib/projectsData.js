@@ -14,12 +14,11 @@ const allProjects = [
   },
   {
     title: "FaceAttend — Face Recognition Attendance",
-    description: "AI-powered smart attendance system using real-time face recognition. Features live webcam enrollment, face-matching attendance, admin analytics dashboard, and face-based credential recovery with 128-dimensional encoding and configurable tolerance matching.",
+    description: "AI-powered smart attendance system with real-time face recognition. Built webcam-based enrollment, face-matching attendance marking, admin analytics dashboard, and face-based credential recovery using 128-d facial encodings.",
     tags: ["Python", "Flask", "OpenCV", "face_recognition", "SQLite", "JavaScript"],
-    img: `${prefix}/assets/project_img/dummy_project.jpg`,
-    demo: "https://github.com/MrSubham08/Face-Recognition-Attendance-System",
+    img: `${prefix}/assets/project_img/faceattend_thumb.png`,
+    demo: "https://face-recognition-attendance-system-xr13.onrender.com",
     github: "https://github.com/MrSubham08/Face-Recognition-Attendance-System",
-    note: "Local only — requires webcam & Python backend",
   },
   {
     title: "Adaptive Notch Filtering",

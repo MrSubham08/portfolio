@@ -84,14 +84,22 @@ export default function AllProjectsPage() {
             <motion.div key={i} variants={cardVariants}>
               <TiltCard className="glass-card overflow-hidden rounded-2xl h-full flex flex-col bg-white/80 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 shadow-sm">
 
-                {/* Thumbnail */}
-                <div className="relative w-full h-48 overflow-hidden">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                {/* Thumbnail — animated WebP if available, else static image */}
+                <div className="relative w-full h-48 overflow-hidden bg-zinc-900">
+                  {project.video ? (
+                    <img
+                      src={project.video}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  ) : (
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  )}
                 </div>
 
                 {/* Content */}
