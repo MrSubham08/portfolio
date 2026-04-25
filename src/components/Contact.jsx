@@ -100,14 +100,14 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           <p className="text-sm font-semibold tracking-widest text-zinc-500 dark:text-zinc-400 uppercase mb-2 text-center md:text-left">
-            Connect with me
+            Connect
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-center md:text-left text-black dark:text-zinc-50 leading-tight">
-            Get in <span className="text-indigo-600 dark:text-indigo-400">touch</span>
+            Let's Build <span className="text-indigo-600 dark:text-indigo-400">Something Great</span>
           </h2>
 
           <p className="text-zinc-800 dark:text-zinc-400 font-medium mb-10 text-center md:text-left text-lg">
-            I'd love to hear from you! If you have any questions, comments, or feedback, please use the form below.
+            I'm currently open to new opportunities. My inbox is always open. Let's discuss how I can bring value to your team.
           </p>
 
           <form
@@ -117,14 +117,14 @@ export default function Contact() {
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="Full Name"
               required
               className="glass-input transition-all duration-300 focus:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
             />
             <input
               type="email"
               name="email"
-              placeholder="Email Profile"
+              placeholder="Work Email"
               required
               className="glass-input transition-all duration-300 focus:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
             />
@@ -139,9 +139,9 @@ export default function Contact() {
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.98 }}
               type="submit" 
-              className="glass-button w-full mt-2 text-lg shadow-indigo-500/25"
+              className="glass-button w-full mt-2 text-lg shadow-indigo-500/25 flex items-center justify-center gap-2"
             >
-              Send Message
+              Send Message <span className="text-xl">→</span>
             </motion.button>
           </form>
         </motion.div>

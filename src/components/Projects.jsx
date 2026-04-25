@@ -58,40 +58,32 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div key={i} variants={cardVariants} whileHover={{ scale: 1.02, y: -4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
               <div className="glass-card overflow-hidden rounded-2xl h-full flex flex-col">
-                {/* Thumbnail — animated WebP if available, else static image */}
+                {/* Thumbnail */}
                 <div className="relative w-full h-48 overflow-hidden bg-zinc-900">
-                  {project.video ? (
-                    <img
-                      src={project.video}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <Image
-                      src={project.img}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  )}
+                  <Image
+                    src={project.img}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Info */}
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-2xl font-extrabold text-black dark:text-zinc-50 mb-2">
+                  <h3 className="text-xl font-extrabold text-black dark:text-zinc-50 mb-2 line-clamp-2 min-h-[3.5rem]">
                     {project.title}
                   </h3>
-                  <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-4 leading-relaxed flex-1">
+                  <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-4 leading-relaxed flex-1 text-[0.9rem] line-clamp-4">
                     {project.description}
                   </p>
 
                   {/* Tags */}
                   {project.tags && (
-                    <div className="flex flex-wrap gap-2 mb-5">
+                    <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map((tag, t) => (
                         <span
                           key={t}
-                          className="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-500/30"
+                          className="text-[0.7rem] font-semibold px-2 py-1 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-500/30 transition-all duration-300 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_10px_rgba(99,102,241,0.5)] cursor-default"
                         >
                           {tag}
                         </span>
@@ -104,7 +96,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="glass-button flex-1 text-center py-2.5 rounded-lg flex items-center justify-center gap-2"
+                      className="glass-button flex-1 text-center py-2.5 rounded-lg flex items-center justify-center gap-2 text-sm"
                     >
                       <ExternalLink size={14} /> Live Demo
                     </a>
