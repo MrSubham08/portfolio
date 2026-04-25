@@ -6,12 +6,12 @@ const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 const allProjects = [
   {
     title: "Vehicle Record System",
-    subtitle: "Computer vision-based smart access control.",
-    description: "Computer vision-based smart access control. Implemented license plate detection using Python, OpenCV, and optimized ML character segmentation.",
-    tags: ["Python", "OpenCV", "Machine Learning"],
+    subtitle: "Smart access control using computer vision.",
+    description: "Built real-time vehicle detection and License Plate Recognition (LPR) with YOLOv8 and OpenCV, featuring a live Flask dashboard for automated entry/exit tracking.",
+    tags: ["Python", "YOLOv8", "OpenCV", "Flask", "SQLite"],
     img: `${prefix}/assets/project_img/dummy_project.jpg`,
-    demo: "https://github.com/MrSubham08",
-    github: "https://github.com/MrSubham08",
+    demo: "https://github.com/MrSubham08/vehicle-records-system",
+    github: "https://github.com/MrSubham08/vehicle-records-system",
   },
   {
     title: "FaceAttend — Face Recognition Attendance",
