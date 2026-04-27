@@ -58,14 +58,25 @@ export default function Projects() {
           {projects.map((project, i) => (
             <motion.div key={i} variants={cardVariants} whileHover={{ scale: 1.02, y: -4 }} transition={{ type: "spring", stiffness: 300, damping: 20 }}>
               <div className="glass-card overflow-hidden rounded-2xl h-full flex flex-col">
-                {/* Thumbnail */}
-                <div className="relative w-full h-48 overflow-hidden bg-zinc-900">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
+                {/* Thumbnail / Video */}
+                <div className="relative w-full h-48 overflow-hidden bg-zinc-900 flex-shrink-0">
+                  {project.img.match(/\.(mp4|webm)$/i) ? (
+                    <video
+                      src={project.img}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </div>
 
                 {/* Info */}
@@ -73,7 +84,7 @@ export default function Projects() {
                   <h3 className="text-xl font-extrabold text-black dark:text-zinc-50 mb-2 line-clamp-2 min-h-[3.5rem]">
                     {project.title}
                   </h3>
-                  <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-4 leading-relaxed flex-1 text-[0.9rem] line-clamp-4">
+                  <p className="text-zinc-800 dark:text-zinc-300 font-medium mb-4 leading-relaxed flex-1 text-[0.9rem]">
                     {project.description}
                   </p>
 

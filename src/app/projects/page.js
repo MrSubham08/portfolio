@@ -100,19 +100,30 @@ export default function AllProjectsPage() {
               className="cursor-pointer"
             >
               <div className="glass-card overflow-hidden rounded-2xl h-full flex flex-col bg-white dark:bg-[#111113] border border-zinc-200 dark:border-zinc-800 shadow-sm hover:border-indigo-500/30">
-                {/* Thumbnail */}
-                <div className="relative w-full h-56 overflow-hidden bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
-                  <Image
-                    src={project.img}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                {/* Thumbnail / Video */}
+                <div className="relative w-full h-56 overflow-hidden bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 flex-shrink-0">
+                  {project.img.match(/\.(mp4|webm)$/i) ? (
+                    <video
+                      src={project.img}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                    />
+                  ) : (
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  )}
                 </div>
 
                 {/* Content - Just Title and Subtitle */}
                 <div className="p-6">
-                  <h2 className="text-xl font-extrabold text-black dark:text-white mb-2 line-clamp-1">
+                  <h2 className="text-xl font-extrabold text-black dark:text-white mb-2 line-clamp-2">
                     {project.title}
                   </h2>
                   <p className="text-zinc-600 dark:text-zinc-400 text-sm font-medium">
@@ -148,7 +159,7 @@ export default function AllProjectsPage() {
             >
               {/* Header */}
               <div className="flex justify-between items-center p-5 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#151518]">
-                <h2 className="text-xl font-bold text-black dark:text-white line-clamp-1 pr-4">
+                <h2 className="text-xl font-bold text-black dark:text-white line-clamp-2 pr-4">
                   {selectedProject.title}
                 </h2>
                 <button 
@@ -161,14 +172,26 @@ export default function AllProjectsPage() {
 
               {/* Scrollable Body */}
               <div className="overflow-y-auto p-6 md:p-8 flex-1">
-                {/* Big Image */}
-                <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] rounded-xl overflow-hidden mb-8 border border-zinc-200 dark:border-zinc-800">
-                  <Image
-                    src={selectedProject.img}
-                    alt={selectedProject.title}
-                    fill
-                    className="object-cover"
-                  />
+                {/* Big Image / Video */}
+                <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] rounded-xl overflow-hidden mb-8 border border-zinc-200 dark:border-zinc-800 flex-shrink-0">
+                  {selectedProject.img.match(/\.(mp4|webm)$/i) ? (
+                    <video
+                      src={selectedProject.img}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <Image
+                      src={selectedProject.img}
+                      alt={selectedProject.title}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </div>
 
                 {/* Description */}
